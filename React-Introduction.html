@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Intro to React</title>
+
+</head>
+<body>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      render(){
+        return(
+          <>
+            <Header />
+            <Content />
+            <Footer />
+          </>
+        )
+      }
+    }
+
+
+  class Header extends React.Component{
+    render(){
+      return(
+        <h1>Hello ALPHA 2022!</h1>
+      )
+    }
+  }
+
+  class Content extends React.Component{
+    render(){
+      return(
+        <ul>
+          <li>Alex</li>
+          <li>Arnold</li>
+          <li>Athen</li>
+          <li>Carlos</li>
+          <li>Kat</li>
+          <li>Curtis</li>
+          <li>Dane</li>
+          <li>Jacob</li>
+          <li>Jennice</li>
+          <li>Jose</li>
+          <li>Keelan</li>
+          <li>Kendra</li>
+          <li>Marc</li>
+          <li>Mariana</li>
+          <li>Michael</li>
+          <li>Nico</li>
+          <li>Nathaniel</li>
+          <li>Omar</li>
+          <li>Paula</li>
+          <li>Ramon</li>
+          <li>Ryan</li>
+          <li>Stevie</li>
+          <li>Tiffany</li>
+        </ul>
+      )
+    }
+  }
+
+  class Footer extends React.Component{
+    render(){
+      return(
+        <h4>Keelan and Paula learning REACT!!!</h4>
+      )
+    }
+  }
+
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+  </script>
+</body>
+</html>
