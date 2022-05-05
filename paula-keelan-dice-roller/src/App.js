@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Dice from "./components/Dice";
 import Rolls from "./components/Rolls";
+import './App.css'
 
 class App extends Component {
   constructor(props) {
@@ -8,11 +9,11 @@ class App extends Component {
     this.state = {
       rollLog:[],
       rollValue:[
-        1, 
-        2, 
-        3, 
-        4, 
-        5, 
+        1,
+        2,
+        3,
+        4,
+        5,
         6
       ],
       rollDefault: 1
@@ -29,16 +30,24 @@ class App extends Component {
     console.log(this.state.rollLog)
   }
 
+  handleReset = () => {
+    this.setState({ rollLog: [] })
+    this.setState({ rollDefault: 1})
+    console.log(this.state.rollLog)
+  }
+
   render() {
     return (
-      <div>
+      <div className="full-page">
         <h1>Paula & Keelan's Dice Roller</h1>
-        <Dice 
+        <Dice
         singleRoll={ this.state.rollDefault }
         logger={ this.handleRoll }
+        resetter={this.handleReset}
+        diceValue={this.state.rollValue}
         />
-        <Rolls 
-        logger={ this.handleRoll }  
+        <Rolls
+        arrayLogger={ this.state.rollLog }
         />
       </div>
     );

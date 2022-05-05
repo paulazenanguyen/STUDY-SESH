@@ -1,0 +1,17 @@
+.square {
+  display: inline-block;
+  border-style: solid;
+  height: 300px;
+  width: 300px;
+    /*everything below this line will centers the body of the square */
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+}
+
+h1 {
+  /*everything below this line will center the text */
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+}

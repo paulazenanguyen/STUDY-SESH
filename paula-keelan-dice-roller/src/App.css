@@ -1,0 +1,9 @@
+.full-page{
+  border: solid;
+  width: 50%;
+  text-align: center;
+}
+
+#dice-button1{
+  margin-right: 30px;
+}
